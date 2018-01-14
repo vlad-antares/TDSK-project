@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>Answer question</title>
+	<link rel="stylesheet" type="text/css" href="../css/slick.css">
+	<link rel="stylesheet" type="text/css" href="../css/font-awesome.css">
+	<link rel="stylesheet" type="text/css" href="../css/green.css">
+	<link rel="stylesheet" type="text/css" href="../css/jquery-ui.css">
+	<link rel="stylesheet" type="text/css" href="../css/selectric.css">
+	<link rel="stylesheet" type="text/css" href="../css/select2.css">
+	<link rel="stylesheet" type="text/css" href="../css/reset.css">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+<body>
+	<header>
+		<div class="header__top_block wrapper_question_answer_header">
+			<div class="header__top_block__logo">
+				<a href="">
+					<img src="../img/logo.png" alt="logo">
+				</a>
+			</div>
+			<div class="header__top_block__nav_menu">
+			<div class="header__top_block__nav_menu_respon">
+				<ul class="header__top_block__nav_menu__ul">
+					<li><a href="">О компании</a></li>
+					<li>
+						<span>Как купить<i class="fa fa-angle-down" aria-hidden="true"></i></span>
+						<div class="header__top_block__nav_menu__ul__li_hover_block">
+							<ul class="header__top_block__nav_menu__ul__li_hover_block__ul">
+								<li><a href="">Как купить квартиру</a></li>
+								<li><a href="">Как обменять квартиру</a></li>
+								<li><a href="">Как продать квартиру</a></li>
+								<li><a href="">Как сделать ремонт</a></li>
+								<li><a href="">Как взять ипотеку</a></li>
+							</ul>
+						</div>
+					</li>
+					<li><a href="">Ипотека</a></li>
+					<li><a href="">Вопрос ответ</a></li>
+					<li><a href="">Микрорайоны</a></li>
+					<li>
+						<span class="header__top_block__nav_menu__ul__li__a">Как обменять
+						<i class="fa fa-angle-down" aria-hidden="true"></i></span>
+						<div class="header__top_block__nav_menu__ul__li_hover_block">
+							<ul class="header__top_block__nav_menu__ul__li_hover_block__ul">
+								<li><a href="">Как купить квартиру</a></li>
+								<li><a href="">Как обменять квартиру</a></li>
+								<li><a href="">Как продать квартиру</a></li>
+								<li><a href="">Как сделать ремонт</a></li>
+								<li><a href="">Как взять ипотеку</a></li>
+							</ul>
+						</div>
+					</li>
+					<li><a href="">Новости и акции</a></li>
+					<li><a href="">Контакты</a></li>
+					<button class="header__top_block__nav_menu__ul__close_but"></button>
+				</ul>
+			</div>
+				<ul class="header__top_block__call_ul">
+					<li>8(3822) 711-011</li>
+					<li><a href="">Заказать звонок</a></li>
+					<button></button>
+				</ul>
+			</div>
+			<div class="header__top_block__nav_menu__ul__open_but">
+				<button></button>
+			</div>
+			<div class="header__top_block__nav_menu__butt_home header__top_block__nav_menu__butt_home__other_pages">
+				<button class="top_apartment_search__button">Подобрать квартиру</button>
+			</div>
+			
+		</div>
+	</header>
+	<body>
+		<div class="wrapper pages_wrapper wrapper_question_answer wrapper_question_answer__active">
+			<div class="wrapper__residential_complex_block__left_block
+			wrapper__residential_complex_block__left_block__sticky">
+				<div class="header__top_block__logo">
+				<a href="">
+					<img src="../img/logo.png" alt="logo">
+				</a>
+				</div>
+				<div class="top_apartment_search">
+					<h2>Найдите квартиру на свой вкус</h2>
+					<button class="top_apartment_search__close_but"></button>
+					<ul class="top_apartment_search__criteria_list">
+						<li>
+							<span class="aisde__toggle_button"><i class="fa fa-angle-down control_down_aside_toggle"></i><i class="fa fa-angle-up control_down_aside_toggle_up"></i>Тип проекта</span>
+							<select name="type" id="type" class="aside__toggle_content">
+								<option value="t_1">Квартиры</option>
+								<option value="t_2">Дома</option>
+								<option value="t_3">Квартиры</option>
+								<option value="t_4">Дома</option>
+							</select>
+						</li>
+						<li>
+							<span class="aisde__toggle_button">
+							<i class="fa fa-angle-down control_down_aside_toggle"></i><i class="fa fa-angle-up control_down_aside_toggle_up"></i>Количество комнат</span>
+							<select name="type" id="type" class="aside__toggle_content">
+								<option value="k_1">1 комната</option>
+								<option value="k_2">2 комнаты</option>
+								<option value="k_3">3 комнаты</option>
+								<option value="k_4">4 комнаты</option>
+							</select>
+						</li>
+						<li>
+							<span class="aisde__toggle_button">
+							<i class="fa fa-angle-down control_down_aside_toggle"></i><i class="fa fa-angle-up control_down_aside_toggle_up"></i>Микрорайон</span>
+							<select name="type" id="type" class="aside__toggle_content">
+								<option value="m_1">Зелёные горки</option>
+								<option value="m_2">Озерки</option>
+								<option value="m_3">Озерки</option>
+								<option value="m_4">Озерки</option>
+							</select>
+						</li>
+						<li class="top_apartment_search__criteria_list__slider_range_li">
+							<span class="aisde__toggle_button">
+							<i class="fa fa-angle-down control_down_aside_toggle"></i><i class="fa fa-angle-up control_down_aside_toggle_up"></i>Стоимость</span>
+							<div class="top_apartment_search__criteria_list__prise_slider aside__toggle_content">
+								<input type="text" id="amount11" disabled>
+								<i class="fa fa-minus" aria-hidden="true"></i>
+								<input type="text" id="amount12" disabled>
+								<div class="bg_slider_range"><div id="slider-range10"></div></div>
+							</div>
+						</li>
+						<li class="top_apartment_search__criteria_list__slider_range_li">
+							<span class="aisde__toggle_button">
+							<i class="fa fa-angle-down control_down_aside_toggle"></i><i class="fa fa-angle-up control_down_aside_toggle_up"></i>Этаж</span>
+							<div class="top_apartment_search__criteria_list__prise_slider aside__toggle_content">
+								<input type="text" id="amount5" disabled>
+								<i class="fa fa-minus" aria-hidden="true"></i>
+								<input type="text" id="amount6" disabled>
+								<div class="bg_slider_range"><div id="slider-range_3"></div></div>
+							</div>
+						</li>
+						<li class="top_apartment_search__criteria_list__switch_li selectric-aside__toggle_content">
+						<span class="aisde__toggle_button">
+							<i class="fa fa-angle-down control_down_aside_toggle"></i><i class="fa fa-angle-up control_down_aside_toggle_up"></i>Этажность</span>
+						<div class="top_apartment_search__criteria_list__switch__container_content selectric-aside__toggle_content">
+							<div class="switch_block">
+								<label class="switch">
+								  <input type="checkbox" id="qwe">
+								  <span class="sliders round"></span>
+								</label>
+							</div>
+							<div class="top_apartment_search__criteria_list__switch_li__switch_info">
+								<label for="qwe">Строящиеся</label>
+								<label for="qwe">Готовые</label>
+							</div>
+						</div>
+						</li>
+						<li class="top_apartment_search__criteria_list__shares">
+							<input type="checkbox" id="shares" class="footer_wrapper__top_info_block__form_block__form__check_block_input">
+							<label for="shares">Акции</label>
+						</li>
+						<li class="top_apartment_search__criteria_list__s_appart">
+							<a href="">Найти свою квартиру</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="wrapper__residential_complex_block__right_cont__big_wrapper">
+				<div class="wrapper__residential_complex_block__right_cont">
+					<ul class="wrapper__residential_complex_block__right_cont__little_nav">
+						<li>
+							<a href="">Главная</a>
+						</li>	
+						<li>
+							Вопрос-ответ
+						</li>
+					</ul>
+					<div class="wrapper__residential_complex_block__right_cont__blur__content wrapper_answer_q">
+						<h1>Вопрос-ответ</h1>
+					</div>
+					<div class="wrapper__residential_complex_block__right_cont__blur wrapper__residential_complex_block__right_cont__blur__answer_question">
+						<div class="overlay"></div>
+					</div>
+				</div>
+				<div class="wrapper__residential_complex_block__right_cont__blur__content__have_excursion wrapper__residential_complex_block__right_cont__blur__content__have_excursion__active">
+					<h2>записаться на экскурсию</h2>
+					<p>Оставьте ваши контактные данные и наши менеджеры свяжутся с вами ближайшее время</p>
+					<form action="">
+						<div class="input_div">
+							<input type="text" placeholder="Имя" class="input">
+							<input type="telephone" placeholder="+7 (___) ___ - __ - __" class="input input_div__tel" data-mask="+7-000-000-00">
+							<button type="submit">Заказать бесплатную консультацию</button>
+						</div>
+						<div class="checkbox_div">
+							<label for="checkbox_div_inpt">
+								<input type="checkbox" checked="" id="checkbox_div_inpt">
+								Я даю согласие на обработку персональных данных
+							</label>
+						</div>
+					</form>
+				</div>
+				<div class="wrapper__residential_complex_block__answer_wrap">
+					<div class="actualy_questions_wrapper">
+						<div class="actualy_questions_wrapper__hidden_wrap">
+							<h2>Есть вопросы?</h2>
+							<p>Задайте свой вопрос прямо сейчас</p>
+							<ul>
+								<li>
+									<input type="text" placeholder="Имя">
+								</li>
+								<li>
+									<input type="text" placeholder="Тема вопроса">
+								</li>
+							</ul>
+							<textarea name="" id="" cols="30" rows="10" placeholder="Ваш вопрос"></textarea>
+							<a href="">Задать вопрос</a>
+						</div>
+						<div class="actualy_questions_wrapper__slider">
+							<h2>Актуальные вопросы <img src="../img/lightning_icon.png" alt=""></h2>
+							<div class="actualy_questions_wrapper__Slider">
+								<div>
+									<ul class="actualy_questions_wrapper__Slider__ul">
+										<li>
+											<a href="" >Планируется ли строительство новых детских садов в Зелёных горках?</a>
+											<div class="actualy_questions_wrapper__container">
+												<!-- <button class="close">
+													<img src="../img/Vector_close_lighter.png" alt="">
+												</button> -->
+												<h3>Как скоро построят дом по адресу ул. Дизайнеров 25?</h3>
+												<ul class="actualy_questions_wrapper__container__little_nav">
+													<li>Любовь</li>
+													<li>23 августа 2017 12:23</li>
+												</ul>
+												<p class="main_info_p">
+													Здравствуйте! Принимаю участие в акции вернём проценты по кредиту до сдачи дома в эксплуатацию северск Ленина 126. Каждый месяц предоставляю до 10 числа выписку по счёту за оплату кредита , но в этом месяце за тот месяц денег так и не поступило . Хотела узнать почему?
+												</p>
+												<p class="paragraph">Добрый день! Дома строятся по графику</p>
+											</div>
+										</li>
+										<li>
+											<a href="">Как скоро построят дом по адресу ул. Дизайнеров 25?</a>
+											<div class="actualy_questions_wrapper__container">
+												<!-- <button class="close">
+													<img src="../img/Vector_close_lighter.png" alt="">
+												</button> -->
+												<h3>Как скоро построят дом по адресу ул. Дизайнеров 25?</h3>
+												<ul class="actualy_questions_wrapper__container__little_nav">
+													<li>Любовь</li>
+													<li>23 августа 2017 12:23</li>
+												</ul>
+												<p class="main_info_p">
+													Здравствуйте! Принимаю участие в акции вернём проценты по кредиту до сдачи дома в эксплуатацию северск Ленина 126. Каждый месяц предоставляю до 10 числа выписку по счёту за оплату кредита , но в этом месяце за тот месяц денег так и не поступило . Хотела узнать почему?
+												</p>
+												<p class="paragraph">Добрый день! Дома строятся по графику</p>
+											</div>
+										</li>
+										<li>
+											<a href="">Выписка по счёту за плату кредита</a>
+											<div class="actualy_questions_wrapper__container">
+												<!-- <button class="close">
+													<img src="../img/Vector_close_lighter.png" alt="">
+												</button> -->
+												<h3>Как скоро построят дом по адресу ул. Дизайнеров 25?</h3>
+												<ul class="actualy_questions_wrapper__container__little_nav">
+													<li>Любовь</li>
+													<li>23 августа 2017 12:23</li>
+												</ul>
+												<p class="main_info_p">
+													Здравствуйте! Принимаю участие в акции вернём проценты по кредиту до сдачи дома в эксплуатацию северск Ленина 126. Каждый месяц предоставляю до 10 числа выписку по счёту за оплату кредита , но в этом месяце за тот месяц денег так и не поступило . Хотела узнать почему?
+												</p>
+												<p class="paragraph">Добрый день! Дома строятся по графику</p>
+											</div>
+										</li>
+										<li>
+											<a href="">Благодарность сотрудникам ТДСК!</a>
+											<div class="actualy_questions_wrapper__container">
+												<!-- <button class="close">
+													<img src="../img/Vector_close_lighter.png" alt="">
+												</button> -->
+												<h3>Как скоро построят дом по адресу ул. Дизайнеров 25?</h3>
+												<ul class="actualy_questions_wrapper__container__little_nav">
+													<li>Любовь</li>
+													<li>23 августа 2017 12:23</li>
+												</ul>
+												<p class="main_info_p">
+													Здравствуйте! Принимаю участие в акции вернём проценты по кредиту до сдачи дома в эксплуатацию северск Ленина 126. Каждый месяц предоставляю до 10 числа выписку по счёту за оплату кредита , но в этом месяце за тот месяц денег так и не поступило . Хотела узнать почему?
+												</p>
+												<p class="paragraph">Добрый день! Дома строятся по графику</p>
+											</div>
+										</li>
+										<li>
+											<a href="">Какие льготы есть для молодых семей?</a>
+											<div class="actualy_questions_wrapper__container">
+												<!-- <button class="close">
+													<img src="../img/Vector_close_lighter.png" alt="">
+												</button> -->
+												<h3>Как скоро построят дом по адресу ул. Дизайнеров 25?</h3>
+												<ul class="actualy_questions_wrapper__container__little_nav">
+													<li>Любовь</li>
+													<li>23 августа 2017 12:23</li>
+												</ul>
+												<p class="main_info_p">
+													Здравствуйте! Принимаю участие в акции вернём проценты по кредиту до сдачи дома в эксплуатацию северск Ленина 126. Каждый месяц предоставляю до 10 числа выписку по счёту за оплату кредита , но в этом месяце за тот месяц денег так и не поступило . Хотела узнать почему?
+												</p>
+												<p class="paragraph">Добрый день! Дома строятся по графику</p>
+											</div>
+										</li>
+									</ul>
+								</div>
+								<div>
+									<ul class="actualy_questions_wrapper__Slider__ul_second">
+										<li>
+											<a href="">Планируется ли строительство новых детских садов в Зелёных горках?</a>
+											<div class="actualy_questions_wrapper__container">
+												<!-- <button class="close">
+													<img src="../img/Vector_close_lighter.png" alt="">
+												</button> -->
+												<h3>Как скоро построят дом по адресу ул. Дизайнеров 25?</h3>
+												<ul class="actualy_questions_wrapper__container__little_nav">
+													<li>Любовь</li>
+													<li>23 августа 2017 12:23</li>
+												</ul>
+												<p class="main_info_p">
+													Здравствуйте! Принимаю участие в акции вернём проценты по кредиту до сдачи дома в эксплуатацию северск Ленина 126. Каждый месяц предоставляю до 10 числа выписку по счёту за оплату кредита , но в этом месяце за тот месяц денег так и не поступило . Хотела узнать почему?
+												</p>
+												<p class="paragraph">Добрый день! Дома строятся по графику</p>
+											</div>
+										</li>
+										<li>
+											<a href="">Как скоро построят дом по адресу ул. Дизайнеров 25?</a>
+											<div class="actualy_questions_wrapper__container">
+												<!-- <button class="close">
+													<img src="../img/Vector_close_lighter.png" alt="">
+												</button> -->
+												<h3>Как скоро построят дом по адресу ул. Дизайнеров 25?</h3>
+												<ul class="actualy_questions_wrapper__container__little_nav">
+													<li>Любовь</li>
+													<li>23 августа 2017 12:23</li>
+												</ul>
+												<p class="main_info_p">
+													Здравствуйте! Принимаю участие в акции вернём проценты по кредиту до сдачи дома в эксплуатацию северск Ленина 126. Каждый месяц предоставляю до 10 числа выписку по счёту за оплату кредита , но в этом месяце за тот месяц денег так и не поступило . Хотела узнать почему?
+												</p>
+												<p class="paragraph">Добрый день! Дома строятся по графику</p>
+											</div>
+										</li>
+										<li>
+											<a href="">Выписка по счёту за плату кредита</a>
+											<div class="actualy_questions_wrapper__container">
+												<!-- <button class="close">
+													<img src="../img/Vector_close_lighter.png" alt="">
+												</button> -->
+												<h3>Как скоро построят дом по адресу ул. Дизайнеров 25?</h3>
+												<ul class="actualy_questions_wrapper__container__little_nav">
+													<li>Любовь</li>
+													<li>23 августа 2017 12:23</li>
+												</ul>
+												<p class="main_info_p">
+													Здравствуйте! Принимаю участие в акции вернём проценты по кредиту до сдачи дома в эксплуатацию северск Ленина 126. Каждый месяц предоставляю до 10 числа выписку по счёту за оплату кредита , но в этом месяце за тот месяц денег так и не поступило . Хотела узнать почему?
+												</p>
+												<p class="paragraph">Добрый день! Дома строятся по графику</p>
+											</div>
+										</li>
+										<li>
+											<a href="">Благодарность сотрудникам ТДСК!</a>
+											<div class="actualy_questions_wrapper__container">
+												<!-- <button class="close">
+													<img src="../img/Vector_close_lighter.png" alt="">
+												</button> -->
+												<h3>Как скоро построят дом по адресу ул. Дизайнеров 25?</h3>
+												<ul class="actualy_questions_wrapper__container__little_nav">
+													<li>Любовь</li>
+													<li>23 августа 2017 12:23</li>
+												</ul>
+												<p class="main_info_p">
+													Здравствуйте! Принимаю участие в акции вернём проценты по кредиту до сдачи дома в эксплуатацию северск Ленина 126. Каждый месяц предоставляю до 10 числа выписку по счёту за оплату кредита , но в этом месяце за тот месяц денег так и не поступило . Хотела узнать почему?
+												</p>
+												<p class="paragraph">Добрый день! Дома строятся по графику</p>
+											</div>
+										</li>
+										<li>
+											<a href="">Какие льготы есть для молодых семей?</a>
+											<div class="actualy_questions_wrapper__container">
+												<!-- <button class="close">
+													<img src="../img/Vector_close_lighter.png" alt="">
+												</button> -->
+												<h3>Как скоро построят дом по адресу ул. Дизайнеров 25?</h3>
+												<ul class="actualy_questions_wrapper__container__little_nav">
+													<li>Любовь</li>
+													<li>23 августа 2017 12:23</li>
+												</ul>
+												<p class="main_info_p">
+													Здравствуйте! Принимаю участие в акции вернём проценты по кредиту до сдачи дома в эксплуатацию северск Ленина 126. Каждый месяц предоставляю до 10 числа выписку по счёту за оплату кредита , но в этом месяце за тот месяц денег так и не поступило . Хотела узнать почему?
+												</p>
+												<p class="paragraph">Добрый день! Дома строятся по графику</p>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="actualy_questions_wrapper__container">
+							<!-- <button class="close">
+								<img src="../img/Vector_close_lighter.png" alt="">
+							</button> -->
+							<ul class="actualy_questions_wrapper__container__little_nav">
+								<li>Любовь</li>
+								<li>23 августа 2017 12:23</li>
+							</ul>
+							<h4>Как скоро построят дом по адресу ул. Дизайнеров 25?</h4>
+							<p class="main_info_p">
+								Здравствуйте! Принимаю участие в акции вернём проценты по кредиту до сдачи дома в эксплуатацию северск Ленина 126. Каждый месяц предоставляю до 10 числа выписку по счёту за оплату кредита , но в этом месяце за тот месяц денег так и не поступило . Хотела узнать почему?
+							</p>
+							<p class="paragraph">Добрый день! Дома строятся по графику</p>
+							<a href="">Задать свой вопрос</a>
+						</div>
+						<div class="actualy_questions_wrapper__container act_dn">
+							<!-- <button class="close">
+								<img src="../img/Vector_close_lighter.png" alt="">
+							</button> -->
+							<ul class="actualy_questions_wrapper__container__little_nav">
+								<li>Любовь</li>
+								<li>23 августа 2017 12:23</li>
+							</ul>
+							<h4>Как скоро построят дом по адресу ул. Дизайнеров 25?</h4>
+							<p class="main_info_p">
+								Здравствуйте! Принимаю участие в акции вернём проценты по кредиту до сдачи дома в эксплуатацию северск Ленина 126. Каждый месяц предоставляю до 10 числа выписку по счёту за оплату кредита , но в этом месяце за тот месяц денег так и не поступило . Хотела узнать почему?
+							</p>
+							<p class="paragraph">Добрый день! Дома строятся по графику</p>
+							<a href="">Задать свой вопрос</a>
+						</div>
+						<div class="actualy_questions_wrapper__container act_dn">
+							<!-- <button class="close">
+								<img src="../img/Vector_close_lighter.png" alt="">
+							</button> -->
+							<ul class="actualy_questions_wrapper__container__little_nav">
+								<li>Любовь</li>
+								<li>23 августа 2017 12:23</li>
+							</ul>
+							<h4>Выписка по счёту за плату кредита</h4>
+							<p class="main_info_p">
+								Здравствуйте! Принимаю участие в акции вернём проценты по кредиту до сдачи дома в эксплуатацию северск Ленина 126. Каждый месяц предоставляю до 10 числа выписку по счёту за оплату кредита , но в этом месяце за тот месяц денег так и не поступило . Хотела узнать почему?
+							</p>
+							<p class="paragraph">Добрый день! Дома строятся по графику</p>
+							<a href="">Задать свой вопрос</a>
+						</div>
+						<div class="actualy_questions_wrapper__container act_dn">
+							<!-- <button class="close">
+								<img src="../img/Vector_close_lighter.png" alt="">
+							</button> -->
+							<ul class="actualy_questions_wrapper__container__little_nav">
+								<li>Любовь</li>
+								<li>23 августа 2017 12:23</li>
+							</ul>
+							<h4>Благодарность сотрудникам ТДСК!</h4>
+							<p class="main_info_p">
+								Здравствуйте! Принимаю участие в акции вернём проценты по кредиту до сдачи дома в эксплуатацию северск Ленина 126. Каждый месяц предоставляю до 10 числа выписку по счёту за оплату кредита , но в этом месяце за тот месяц денег так и не поступило . Хотела узнать почему?
+							</p>
+							<p class="paragraph">Добрый день! Дома строятся по графику</p>
+							<a href="">Задать свой вопрос</a>
+						</div>
+						<div class="actualy_questions_wrapper__container act_dn">
+							<!-- <button class="close">
+								<img src="../img/Vector_close_lighter.png" alt="">
+							</button> -->
+							<ul class="actualy_questions_wrapper__container__little_nav">
+								<li>Любовь</li>
+								<li>23 августа 2017 12:23</li>
+							</ul>
+							<h4>Какие льготы есть для молодых семей?</h4>
+							<p class="main_info_p">
+								Здравствуйте! Принимаю участие в акции вернём проценты по кредиту до сдачи дома в эксплуатацию северск Ленина 126. Каждый месяц предоставляю до 10 числа выписку по счёту за оплату кредита , но в этом месяце за тот месяц денег так и не поступило . Хотела узнать почему?
+							</p>
+							<p class="paragraph">Добрый день! Дома строятся по графику</p>
+							<a href="">Задать свой вопрос</a>
+						</div>
+						<div class="actualy_questions_wrapper__container act_dn">
+							<!-- <button class="close">
+								<img src="../img/Vector_close_lighter.png" alt="">
+							</button> -->
+							<ul class="actualy_questions_wrapper__container__little_nav">
+								<li>Любовь</li>
+								<li>23 августа 2017 12:23</li>
+							</ul>
+							<h4>Планируется ли строительство новых детских садов в Зелёных горках?</h4>
+							<p class="main_info_p">
+								Здравствуйте! Принимаю участие в акции вернём проценты по кредиту до сдачи дома в эксплуатацию северск Ленина 126. Каждый месяц предоставляю до 10 числа выписку по счёту за оплату кредита , но в этом месяце за тот месяц денег так и не поступило . Хотела узнать почему?
+							</p>
+							<p class="paragraph">Добрый день! Дома строятся по графику</p>
+							<a href="">Задать свой вопрос</a>
+						</div>
+						<div class="actualy_questions_wrapper__container act_dn">
+							<!-- <button class="close">
+								<img src="../img/Vector_close_lighter.png" alt="">
+							</button> -->
+							<ul class="actualy_questions_wrapper__container__little_nav">
+								<li>Любовь</li>
+								<li>23 августа 2017 12:23</li>
+							</ul>
+							<h4>Как скоро построят дом по адресу ул. Дизайнеров 25?</h4>
+							<p class="main_info_p">
+								Здравствуйте! Принимаю участие в акции вернём проценты по кредиту до сдачи дома в эксплуатацию северск Ленина 126. Каждый месяц предоставляю до 10 числа выписку по счёту за оплату кредита , но в этом месяце за тот месяц денег так и не поступило . Хотела узнать почему?
+							</p>
+							<p class="paragraph">Добрый день! Дома строятся по графику</p>
+							<a href="">Задать свой вопрос</a>
+						</div>
+						<div class="actualy_questions_wrapper__container act_dn">
+							<!-- <button class="close">
+								<img src="../img/Vector_close_lighter.png" alt="">
+							</button> -->
+							<ul class="actualy_questions_wrapper__container__little_nav">
+								<li>Любовь</li>
+								<li>23 августа 2017 12:23</li>
+							</ul>
+							<h4>Выписка по счёту за плату кредита</h4>
+							<p class="main_info_p">
+								Здравствуйте! Принимаю участие в акции вернём проценты по кредиту до сдачи дома в эксплуатацию северск Ленина 126. Каждый месяц предоставляю до 10 числа выписку по счёту за оплату кредита , но в этом месяце за тот месяц денег так и не поступило . Хотела узнать почему?
+							</p>
+							<p class="paragraph">Добрый день! Дома строятся по графику</p>
+							<a href="">Задать свой вопрос</a>
+						</div>
+						<div class="actualy_questions_wrapper__container act_dn">
+							<!-- <button class="close">
+								<img src="../img/Vector_close_lighter.png" alt="">
+							</button> -->
+							<ul class="actualy_questions_wrapper__container__little_nav">
+								<li>Любовь</li>
+								<li>23 августа 2017 12:23</li>
+							</ul>
+							<h4>Благодарность сотрудникам ТДСК!</h4>
+							<p class="main_info_p">
+								Здравствуйте! Принимаю участие в акции вернём проценты по кредиту до сдачи дома в эксплуатацию северск Ленина 126. Каждый месяц предоставляю до 10 числа выписку по счёту за оплату кредита , но в этом месяце за тот месяц денег так и не поступило . Хотела узнать почему?
+							</p>
+							<p class="paragraph">Добрый день! Дома строятся по графику</p>
+							<a href="">Задать свой вопрос</a>
+						</div>
+						<div class="actualy_questions_wrapper__container act_dn">
+							<!-- <button class="close">
+								<img src="../img/Vector_close_lighter.png" alt="">
+							</button> -->
+							<ul class="actualy_questions_wrapper__container__little_nav">
+								<li>Любовь</li>
+								<li>23 августа 2017 12:23</li>
+							</ul>
+							<h4>Какие льготы есть для молодых семей?</h4>
+							<p class="main_info_p">
+								Здравствуйте! Принимаю участие в акции вернём проценты по кредиту до сдачи дома в эксплуатацию северск Ленина 126. Каждый месяц предоставляю до 10 числа выписку по счёту за оплату кредита , но в этом месяце за тот месяц денег так и не поступило . Хотела узнать почему?
+							</p>
+							<p class="paragraph">Добрый день! Дома строятся по графику</p>
+							<a href="">Задать свой вопрос</a>
+						</div>
+					</div>
+					<div class="wrapper__residential_complex_block__right_cont__main_cont_after_head">
+						<form action="" class="wrapper__residential_complex_block__right_cont__main_cont_after_head__answer_form">
+							<input type="text" placeholder="Быстрый поиск по вопросам">
+							<button type="submit">
+								<img src="../img/Vector_search.png" alt="">
+							</button>
+						</form>
+						<ul class="wrapper__residential_complex_block__right_cont__main_cont_after_head__list_answers">
+							<li>
+								<a href="">
+									<div class="actualy_questions_wrapper__container">
+										<!-- <button class="close">
+											<img src="../img/Vector_close_lighter.png" alt="">
+										</button> -->
+										<ul class="actualy_questions_wrapper__container__little_nav">
+											<li>Любовь</li>
+											<li>23 августа 2017 12:23</li>
+										</ul>
+										<h4>Планируется ли строительство новых детских садов в Зелёных горках?</h4>
+										<p class="main_info_p">
+											Здравствуйте! Принимаю участие в акции вернём проценты по кредиту до сдачи дома в эксплуатацию северск Ленина 126. Каждый месяц предоставляю до 10 числа выписку по счёту за оплату кредита , но в этом месяце за тот месяц денег так и не поступило . Хотела узнать почему?
+										</p>
+										<p class="paragraph">Добрый день, для уточнения информации позвоните в юридический отдел (3822) 711-015.</p>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<div class="actualy_questions_wrapper__container">
+										<!-- <button class="close">
+											<img src="../img/Vector_close_lighter.png" alt="">
+										</button> -->
+										<ul class="actualy_questions_wrapper__container__little_nav">
+											<li>Любовь</li>
+											<li>23 августа 2017 12:23</li>
+										</ul>
+										<h4>Как скоро построят дом по адресу ул. Дизайнеров 25?</h4>
+										<p class="main_info_p">
+											Здравствуйте! Принимаю участие в акции вернём проценты по кредиту до сдачи дома в эксплуатацию северск Ленина 126. Каждый месяц предоставляю до 10 числа выписку по счёту за оплату кредита , но в этом месяце за тот месяц денег так и не поступило . Хотела узнать почему?
+										</p>
+										<p class="paragraph">Добрый день! Дома строятся по графику</p>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<div class="actualy_questions_wrapper__container">
+										<!-- <button class="close">
+											<img src="../img/Vector_close_lighter.png" alt="">
+										</button> -->
+										<ul class="actualy_questions_wrapper__container__little_nav">
+											<li>Любовь</li>
+											<li>23 августа 2017 12:23</li>
+										</ul>
+										<h4>Планируется ли строительство новых детских садов в Зелёных горках?</h4>
+										<p class="main_info_p">
+											Здравствуйте! Принимаю участие в акции вернём проценты по кредиту до сдачи дома в эксплуатацию северск Ленина 126. Каждый месяц предоставляю до 10 числа выписку по счёту за оплату кредита , но в этом месяце за тот месяц денег так и не поступило . Хотела узнать почему?
+										</p>
+										<p class="paragraph">Добрый день, для уточнения информации позвоните в юридический отдел (3822) 711-015.</p>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<div class="actualy_questions_wrapper__container">
+										<!-- <button class="close">
+											<img src="../img/Vector_close_lighter.png" alt="">
+										</button> -->
+										<ul class="actualy_questions_wrapper__container__little_nav">
+											<li>Любовь</li>
+											<li>23 августа 2017 12:23</li>
+										</ul>
+										<h4>Как скоро построят дом по адресу ул. Дизайнеров 25?</h4>
+										<p class="main_info_p">
+											Здравствуйте! Принимаю участие в акции вернём проценты по кредиту до сдачи дома в эксплуатацию северск Ленина 126. Каждый месяц предоставляю до 10 числа выписку по счёту за оплату кредита , но в этом месяце за тот месяц денег так и не поступило . Хотела узнать почему?
+										</p>
+										<p class="paragraph">Добрый день! Дома строятся по графику</p>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<div class="actualy_questions_wrapper__container">
+										<!-- <button class="close">
+											<img src="../img/Vector_close_lighter.png" alt="">
+										</button> -->
+										<ul class="actualy_questions_wrapper__container__little_nav">
+											<li>Любовь</li>
+											<li>23 августа 2017 12:23</li>
+										</ul>
+										<h4>Планируется ли строительство новых детских садов в Зелёных горках?</h4>
+										<p class="main_info_p">
+											Здравствуйте! Принимаю участие в акции вернём проценты по кредиту до сдачи дома в эксплуатацию северск Ленина 126. Каждый месяц предоставляю до 10 числа выписку по счёту за оплату кредита , но в этом месяце за тот месяц денег так и не поступило . Хотела узнать почему?
+										</p>
+										<p class="paragraph">Добрый день, для уточнения информации позвоните в юридический отдел (3822) 711-015.</p>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<div class="actualy_questions_wrapper__container">
+										<!-- <button class="close">
+											<img src="../img/Vector_close_lighter.png" alt="">
+										</button> -->
+										<ul class="actualy_questions_wrapper__container__little_nav">
+											<li>Любовь</li>
+											<li>23 августа 2017 12:23</li>
+										</ul>
+										<h4>Как скоро построят дом по адресу ул. Дизайнеров 25?</h4>
+										<p class="main_info_p">
+											Здравствуйте! Принимаю участие в акции вернём проценты по кредиту до сдачи дома в эксплуатацию северск Ленина 126. Каждый месяц предоставляю до 10 числа выписку по счёту за оплату кредита , но в этом месяце за тот месяц денег так и не поступило . Хотела узнать почему?
+										</p>
+										<p class="paragraph">Добрый день! Дома строятся по графику</p>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<div class="actualy_questions_wrapper__container">
+										<!-- <button class="close">
+											<img src="../img/Vector_close_lighter.png" alt="">
+										</button> -->
+										<ul class="actualy_questions_wrapper__container__little_nav">
+											<li>Любовь</li>
+											<li>23 августа 2017 12:23</li>
+										</ul>
+										<h4>Планируется ли строительство новых детских садов в Зелёных горках?</h4>
+										<p class="main_info_p">
+											Здравствуйте! Принимаю участие в акции вернём проценты по кредиту до сдачи дома в эксплуатацию северск Ленина 126. Каждый месяц предоставляю до 10 числа выписку по счёту за оплату кредита , но в этом месяце за тот месяц денег так и не поступило . Хотела узнать почему?
+										</p>
+										<p class="paragraph">Добрый день, для уточнения информации позвоните в юридический отдел (3822) 711-015.</p>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<div class="actualy_questions_wrapper__container">
+										<!-- <button class="close">
+											<img src="../img/Vector_close_lighter.png" alt="">
+										</button> -->
+										<ul class="actualy_questions_wrapper__container__little_nav">
+											<li>Любовь</li>
+											<li>23 августа 2017 12:23</li>
+										</ul>
+										<h4>Как скоро построят дом по адресу ул. Дизайнеров 25?</h4>
+										<p class="main_info_p">
+											Здравствуйте! Принимаю участие в акции вернём проценты по кредиту до сдачи дома в эксплуатацию северск Ленина 126. Каждый месяц предоставляю до 10 числа выписку по счёту за оплату кредита , но в этом месяце за тот месяц денег так и не поступило . Хотела узнать почему?
+										</p>
+										<p class="paragraph">Добрый день! Дома строятся по графику</p>
+									</div>
+								</a>
+							</li>
+						</ul>
+						<div class="wrapper__residential_complex_block__right_cont__main_cont_after_head__list_answers__pagination__wrap">
+							<ul class="wrapper__residential_complex_block__right_cont__main_cont_after_head__list_answers__pagination">
+								<li>
+									<a href="" class="pagination_control">
+										<i class="fa fa-angle-left"></i>
+									</a>
+								</li>
+								<li>
+									<a href="" class="pagination_digital pagination_digital_active">1</a>
+								</li>
+								<li>
+									<a href="" class="pagination_digital">2</a>
+								</li>
+								<li>
+									<a href="" class="pagination_digital">3</a>
+								</li>
+								<li>
+									<a href="" class="pagination_digital">4</a>
+								</li>
+								<li>
+									<a href="" class="pagination_digital">5</a>
+								</li>
+								<li>
+									<a href="" class="pagination_control">
+										<i class="fa fa-angle-right"></i>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="wrapper__residential_complex_block__right_cont__main_cont_after_head__banner">
+					      <div>
+					       <a href="">
+					        <img src="../img/Banner.png" alt="">
+					       </a>
+					      </div>
+					      <div>
+					       <a href="">
+					        <img src="../img/Banner.png" alt="">
+					       </a>
+					      </div>
+					      <div>
+					       <a href="">
+					        <img src="../img/Banner.png" alt="">
+					       </a>
+					      </div>
+					      </div>
+					</div>
+				</div>
+			</div>
+			<div class="top_apartment_search other_pages__top_apartment_search">
+				<h2>Найдите квартиру на свой вкус</h2>
+				<button class="top_apartment_search__close_but"></button>
+				<ul class="top_apartment_search__criteria_list">
+					<li>
+						<span>Тип проекта</span>
+						<select name="type" id="type">
+							<option value="t_1">Квартиры</option>
+							<option value="t_2">Дома</option>
+							<option value="t_3">Квартиры</option>
+							<option value="t_4">Дома</option>
+						</select>
+					</li>
+					<li>
+						<span>Количество комнат</span>
+						<select name="type" id="type">
+							<option value="k_1">1 комната</option>
+							<option value="k_2">2 комнаты</option>
+							<option value="k_3">3 комнаты</option>
+							<option value="k_4">4 комнаты</option>
+						</select>
+					</li>
+					<li>
+						<span>Микрорайон</span>
+						<select name="type" id="type">
+							<option value="m_1">Зелёные горки</option>
+							<option value="m_2">Озерки</option>
+							<option value="m_3">Озерки</option>
+							<option value="m_4">Озерки</option>
+						</select>
+					</li>
+					<li class="top_apartment_search__criteria_list__slider_range_li">
+						<span>Стоимость</span>
+						<div class="top_apartment_search__criteria_list__prise_slider">
+							<input type="text" id="amount1" disabled>
+							<i class="fa fa-minus" aria-hidden="true"></i>
+							<input type="text" id="amount2" disabled>
+							<div class="bg_slider_range"><div id="slider-range"></div></div>
+						</div>
+					</li>
+					<li class="top_apartment_search__criteria_list__slider_range_li">
+						<span>Этаж</span>
+						<div class="top_apartment_search__criteria_list__prise_slider">
+							<input type="text" id="amount3" disabled>
+							<i class="fa fa-minus" aria-hidden="true"></i>
+							<input type="text" id="amount4" disabled>
+							<div class="bg_slider_range"><div id="slider-range_2"></div></div>
+						</div>
+					</li>
+					<li class="top_apartment_search__criteria_list__switch_li">
+					<label for="qwe">Строящиеся</label>
+						<div class="switch_block">
+							<label class="switch">
+							  <input type="checkbox" id="qwe">
+							  <span class="sliders round"></span>
+							</label>
+						</div>
+					<label for="qwe">Готовые</label>
+					</li>
+					<li class="top_apartment_search__criteria_list__shares">
+						<input type="checkbox" id="shares">
+						<label for="shares">Акции</label>
+					</li>
+					<li class="top_apartment_search__criteria_list__s_appart">
+						<a href="">Найти свою квартиру</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</body>
+	<footer>
+		<div class="footer_wrapper">
+			<div class="footer_wrapper__map_block">
+				<div class="footer_wrapper__map_block__left_block">
+					<ul class="nav nav-tabs">
+					  <li class="active"><a href="#tomsk" data-toggle="tab">Томск</a></li>
+					  <li><a href="#novosibir" data-toggle="tab">Новосибирск</a></li>
+					</ul>
+					<div class="tab-content">
+					  <div class="tab-pane active" id="tomsk">
+					  	<p>Мегарайон «Южные Ворота» <br/>ул. Грачёва, <br/>1 +7 913 800-83-83</p>
+								  	<p>ЖК «Радонежский» <br/>ул. Трудовая, 22\1 (усл) <br/>+7 913 800-73-73</p>
+								  	<p>Микрорайон «Ясный» <br/>г. Северск, ул. Ленина,<br>124 <br/>+7 913 800-76-76</p>
+								  	<p>Микрорайон «Зелёные<br>горки» <br/>ул. Дизайнеров, (КПД 21) <br/>+7 913 800-79-79</p>
+					  </div>
+					  <div class="tab-pane" id="novosibir">...</div>
+					</div>
+				</div>
+				<div class="footer_wrapper__map_block__right_block" id="map">
+					
+				</div>
+			</div>
+			<div class="footer_wrapper__top_info_block">
+				<div class="footer_wrapper__top_info_block__nav_top_block">
+					<div class="footer_wrapper__top_info_block__nav__address">
+						<div class="footer_wrapper__top_info_block__nav__address__logo">
+							<a href=""><img src="../img/logo.png" alt="img"></a>
+						</div>
+						<div class="footer_wrapper__top_info_block__nav__address__address">
+							<h3>Центр реализации квартир:</h3>
+							<span>пл. Батенькова, 2 БЦ «СТАТУС» (5 этаж)</span>
+							<span>8 (3822) 711-011</span>
+						</div>
+					</div>
+					<div class="footer_wrapper__top_info_block__nav__top_nav">
+						<ul class="footer_wrapper__top_info_block__nav__top_nav__ul">
+							<li><a href="">О компании</a></li>
+							<li><a href="">Микрорайоны</a></li>
+							<li><a href="">Контакты</a></li>
+							<li><a href="">Новости и акции</a></li>
+							<li><a href="">Экскурсии</a></li>
+							<li><a href="">Проектные<br/> декларации</a></li>
+							<li><a href="">Вопрос-ответ</a></li>
+							<li><a href="">Как купить</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="footer_wrapper__top_info_block__form_block">
+					<form action="#" class="footer_wrapper__top_info_block__form_block__form">
+						<h2>Не нашли<br/> нужную информацию?</h2>
+						<p>Оставьте ваши контактные данные и наши менеджеры свяжутся с вами ближайшее время</p>
+						<div class="footer_wrapper__top_info_block__form_block__form__input_block">
+							<div class="footer_wrapper__top_info_block__form_block__form__input_block__left_input">
+								<input type="text" placeholder="Имя">
+							</div>
+							<div class="footer_wrapper__top_info_block__form_block__form__input_block__right_input">
+								<input type="text" placeholder="+7 (___) ___ - __ - __">
+							</div>
+						</div>
+						<div class="footer_wrapper__top_info_block__form_block__form__but_block">
+							<a href="">Заказать бесплатную консультацию</a>
+						</div>
+						<div class="footer_wrapper__top_info_block__form_block__form__check_block">
+							<input type="checkbox" id="compliance" class="footer_wrapper__top_info_block__form_block__form__check_block_input">
+							<label for="compliance">Я даю согласие на обработку персональных данных</label>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="footer_wrapper__bottom_block">
+				<span>ТДСК, 2017</span>
+				<div class="footer_wrapper__bottom_block__social_ul">
+					<li><a href=""><i class="fa fa-vk" aria-hidden="true"></i></a></li>
+					<li><a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+					<li><a href=""><i class="fa fa-odnoklassniki" aria-hidden="true"></i></a></li>
+					<li><a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+					<li><a href=""><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+				</div>
+				<span>Разработано в Redline</span>
+			</div>
+		</div>
+	</footer>
+
+	<script type="text/javascript" src="../js/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.mask.js"></script>
+	<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../js/jquery-ui.js"></script>
+	<script type="text/javascript" src="../js/jquery.selectric.min.js"></script>
+	<script type="text/javascript" src="../js/select2.js"></script>
+	<script type="text/javascript" src="../js/icheck.min.js"></script>
+	<script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+	<script type="text/javascript" src="../js/slick.js"></script>
+	<script type="text/javascript" src="../js/main.js"></script>
+</body>
+</html>
